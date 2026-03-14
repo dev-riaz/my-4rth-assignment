@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job | Tracker</title>
 
+    <link rel="shortcut icon" href="./image/icons8-job-seeker-48.png" type="image/x-icon">
+
     <!-- google font cdn -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -61,30 +63,30 @@
             </div>
             <!-- 3 all filter btn -->
             <div class="flex items-center gap-3 mt-6">
-                <button id="all-filter-btn"
+                <button onclick="toggleStyle('all-filter-btn')" id="all-filter-btn"
                     class="btn btn-xs btn bg-[#3B82F6] px-6 py-1 rounded-[3px] text-[#FFFFFF] text-[12px] font-semibold cursor-pointer border border-gray-500/20">All</button>
-                <button id="interview-filter-btn"
+                <button onclick="toggleStyle('interview-filter-btn')" id="interview-filter-btn"
                     class="btn btn-xs btn bg-[#ffffff] px-3 py-1 border border-gray-500/20 rounded-[3px] text-[#64748B] text-[12px] font-semibold cursor-pointer">Interview</button>
-                <button id="rejected-filter-btn"
+                <button onclick="toggleStyle('rejected-filter-btn')" id="rejected-filter-btn"
                     class="btn btn-xs btn bg-[#ffffff] px-3 py-1 border border-gray-500/20 rounded-[3px] text-[#64748B] text-[12px] font-semibold cursor-pointer">Rejected</button>
             </div>
         </section>
         <section>
             <!-- no job section -->
-            <div id="filter-section" class="mt-6">
-                <!-- <div id="inter-sec"
-                    class=" bg-[#FFFFFF] text-center py-12 mb-6 border border-gray-500/20 rounded-[5px]">
+            <div id="filter-section" class="mt-6 hidden">
+                <div class=" bg-[#FFFFFF] text-center py-12 mb-6 border border-gray-500/20 rounded-[5px]">
                     <img class="block mx-auto" src="./image/jobs.png" alt="">
                     <h2 class=" text-[#002C5C] text-[24px] font-bold mt-3">No jobs available</h2>
                     <p class="text-[#64748B] text-[16px]">Check back soon for new job opportunities</p>
-                </div> -->
+                </div>
             </div>
-            <div id="all-card-section" class="section">
+            <div id="all-cards-section" class="">
                 <!-- card-1 -->
                 <div
                     class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
-                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">Mobile First Corp</h3>
+                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">Mobile First Corp
+                        </h3>
                         <p class="skill text-[#64748B] text-[16px] mb-3">React Native Developer</p>
                         <p class="job-details text-[#64748B] text-[12px]">Remote
                             •
@@ -116,7 +118,8 @@
                 <div
                     class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
-                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">WebFlow Agency</h3>
+                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">WebFlow Agency
+                        </h3>
                         <p class="skill text-[#64748B] text-[16px] mb-3">Web Designer & Developer</p>
                         <p class="job-details text-[#64748B] text-[12px]">Los Angeles, CA
                             •
@@ -143,7 +146,8 @@
                 <div
                     class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
-                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">DataViz Solutions</h3>
+                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">DataViz Solutions
+                        </h3>
                         <p class="skill text-[#64748B] text-[16px] mb-3">Data Visualization Specialist</p>
                         <p class="job-details text-[#64748B] text-[12px]">Boston, MA
                             •
@@ -171,7 +175,8 @@
                 <div
                     class="card-container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
-                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">CloudFirst Inc</h3>
+                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">CloudFirst Inc
+                        </h3>
                         <p class="skill text-[#64748B] text-[16px] mb-3">Backend Developer</p>
                         <p class="job-details text-[#64748B] text-[12px]">Seattle, WA
                             •
@@ -199,7 +204,8 @@
                 <div
                     class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
-                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">Innovation Labs</h3>
+                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">Innovation Labs
+                        </h3>
                         <p class="skill text-[#64748B] text-[16px] mb-3">UI/UX Engineer</p>
                         <p class="job-details text-[#64748B] text-[12px]">Austin, TX
                             •
@@ -227,7 +233,8 @@
                 <div
                     class="card-container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
-                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">MegaCorp Solutions</h3>
+                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">MegaCorp
+                            Solutions</h3>
                         <p class="skill text-[#64748B] text-[16px] mb-3">JavaScript Developer</p>
                         <p class="job-details text-[#64748B] text-[12px]">New York, NY
                             •
@@ -283,7 +290,8 @@
                 <div
                     class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
-                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">TechCorp Industries</h3>
+                        <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">TechCorp
+                            Industries</h3>
                         <p class="skill text-[#64748B] text-[16px] mb-3">Senior Frontend Developer</p>
                         <p class="job-details text-[#64748B] text-[12px]">San Francisco, CA
                             •
@@ -310,6 +318,7 @@
             </div>
         </section>
     </main>
+    <script src="./script.js"></script>
 </body>
 
 </html>
