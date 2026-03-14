@@ -30,9 +30,9 @@
 
 </head>
 
-<body class="bg-[#F8FAFC]">
+<body class="bg-[#F8FAFC] py-6">
     <header>
-        <section class="w-[82%] mx-auto mt-8">
+        <section class="w-[82%] mx-auto">
             <div>
                 <h2 class="text-[#002C5C] text-[32px] font-bold">Job Application Tracker</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 justify-between mt-5">
@@ -54,12 +54,12 @@
             <hr class="mt-6 text-gray-300/70">
         </section>
     </header>
-    <main class="w-[82%] mx-auto mt-8">
+    <main class="w-[82%] mx-auto mt-4">
         <section>
             <!-- available job text -->
             <div class="flex justify-between items-center mt-6">
                 <h3 class="text-[#002C5C] text-[20px] font-semibold">Available Jobs</h3>
-                <span class="text-[#64748B] text[16px] font-medium">8 jobs</span>
+                <span id="jobs-count" class=" text-[#64748B] text[16px] font-medium">0 jobs</span>
             </div>
             <!-- 3 all filter btn -->
             <div class="flex items-center gap-3 mt-6">
@@ -74,16 +74,12 @@
         <section>
             <!--internal no job section -->
             <div id="filter-section" class="mt-6 hidden">
-                <div class=" bg-[#FFFFFF] text-center py-12 mb-6 border border-gray-500/20 rounded-[5px]">
-                    <img class="block mx-auto" src="./image/jobs.png" alt="">
-                    <h2 class=" text-[#002C5C] text-[24px] font-bold mt-3">No jobs available</h2>
-                    <p class="text-[#64748B] text-[16px]">Check back soon for new job opportunities</p>
-                </div>
+                
             </div>
             <div id="all-cards-section" class="">
                 <!-- card-1 -->
                 <div
-                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row justify-between border-gray-500/20 rounded-[5px] ">
+                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 border flex flex-col-reverse md:flex-row justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
                         <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">Mobile First Corp
                         </h3>
@@ -109,14 +105,12 @@
                     text-[14px] font-semibold hover:text-white">Rejected</button>
                         </div>
                     </div>
-                    <div class="delete-btn rounded-full h-10 w-10 flex justify-center items-center
-            border-gray-500/30 border">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </div>
+                    <button class="delete-btn btn h-10 w-10 rounded-full"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
                 <!-- card-2 -->
                 <div
-                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
+                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
                         <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">WebFlow Agency
                         </h3>
@@ -137,14 +131,12 @@
                     text-[14px] font-semibold hover:text-white">Rejected</button>
                         </div>
                     </div>
-                    <div class="delete-btn rounded-full h-10 w-10 flex justify-center items-center
-            border-gray-500/30 border">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </div>
+                    <button class="delete-btn btn h-10 w-10 rounded-full"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
                 <!-- card-3 -->
                 <div
-                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
+                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
                         <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">DataViz Solutions
                         </h3>
@@ -166,14 +158,12 @@
                     text-[14px] font-semibold hover:text-white">Rejected</button>
                         </div>
                     </div>
-                    <div class="delete-btn rounded-full h-10 w-10 flex justify-center items-center
-            border-gray-500/30 border">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </div>
+                    <button class="delete-btn btn h-10 w-10 rounded-full"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
                 <!-- card-4 -->
                 <div
-                    class="card-container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
+                    class="card-container bg-[#FFFFFF] py-6 px-6 mt-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
                         <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">CloudFirst Inc
                         </h3>
@@ -195,14 +185,12 @@
                     text-[14px] font-semibold hover:text-white">Rejected</button>
                         </div>
                     </div>
-                    <div class="delete-btn rounded-full h-10 w-10 flex justify-center items-center
-            border-gray-500/30 border">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </div>
+                    <button class="delete-btn btn h-10 w-10 rounded-full"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
                 <!-- card-5 -->
                 <div
-                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
+                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
                         <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">Innovation Labs
                         </h3>
@@ -224,14 +212,12 @@
                     text-[14px] font-semibold hover:text-white">Rejected</button>
                         </div>
                     </div>
-                    <div class="delete-btn rounded-full h-10 w-10 flex justify-center items-center
-            border-gray-500/30 border">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </div>
+                    <button class="delete-btn btn h-10 w-10 rounded-full"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
                 <!-- card-6 -->
                 <div
-                    class="card-container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
+                    class="card-container bg-[#FFFFFF] py-6 px-6 mt-6  border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
                         <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">MegaCorp
                             Solutions</h3>
@@ -253,14 +239,12 @@
                     text-[14px] font-semibold hover:text-white">Rejected</button>
                         </div>
                     </div>
-                    <div class="delete-btn rounded-full h-10 w-10 flex justify-center items-center
-            border-gray-500/30 border">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </div>
+                    <button class="delete-btn btn h-10 w-10 rounded-full"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
                 <!-- card-7 -->
                 <div
-                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
+                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
                         <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">StartupXYZ</h3>
                         <p class="skill text-[#64748B] text-[16px] mb-3">Full Stack Engineer</p>
@@ -281,14 +265,12 @@
                     text-[14px] font-semibold hover:text-white">Rejected</button>
                         </div>
                     </div>
-                    <div class="delete-btn rounded-full h-10 w-10 flex justify-center items-center
-            border-gray-500/30 border">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </div>
+                    <button class="delete-btn btn h-10 w-10 rounded-full"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
                 <!-- card-8 -->
                 <div
-                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 mb-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
+                    class="card-container container bg-[#FFFFFF] py-6 px-6 mt-6 border flex flex-col-reverse md:flex-row  justify-between border-gray-500/20 rounded-[5px] ">
                     <div>
                         <h3 class="company-name text-[#002C5C] text-[18px] font-semibold mt-3 md:mt-0">TechCorp
                             Industries</h3>
@@ -310,10 +292,8 @@
                     text-[14px] font-semibold hover:text-white">Rejected</button>
                         </div>
                     </div>
-                    <div class="delete-btn rounded-full h-10 w-10 flex justify-center items-center
-            border-gray-500/30 border">
-                        <i class="fa-regular fa-trash-can"></i>
-                    </div>
+                    <button class="delete-btn btn h-10 w-10 rounded-full"><i
+                            class="fa-regular fa-trash-can"></i></button>
                 </div>
             </div>
         </section>
