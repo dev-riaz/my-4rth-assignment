@@ -1,11 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job | Tracker</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+
 </head>
+
 <body>
-    
+    <header>
+        <section class="w-[82%] mx-auto mt-8">
+            <div>
+                <h2 class="text-[#002C5C] text-[32px] font-bold">Job Application Tracker</h2>
+                <div class="flex gap-4 justify-between mt-5">
+                    <div class="bg-white flex-1 py-4 pl-3 border border-gray-500/20 rounded-[5px]">
+                        <p class="text-[#323B49] text-[14px] font-medium">Total</p>
+                        <h1 id="total" class="text-[#002C5C] text-[24px] 
+                    font-bold">0</h1>
+                    </div>
+                    <div class="bg-white flex-1 py-4 pl-3 border border-gray-500/20 rounded-[5px]">
+                        <span class="text-[#323B49] text-[14px] font-bold">Interview</span>
+                        <h1 id="interview-count" class="text-[#10B981] text-[24px] font-bold">0</h1>
+                    </div>
+                    <div class="bg-white flex-1 py-4 pl-3 border border-gray-500/20 rounded-[5px]">
+                        <span class="text-[#323B49] text-[14px] font-bold">Rejected</span>
+                        <h1 id="rejected-count" class="text-[#EF4444] text-[24px] font-bold">0</h1>
+                    </div>
+                </div>
+            </div>
+            <hr class="mt-6 text-gray-300/70">
+        </section>
+    </header>
 </body>
+
 </html>
