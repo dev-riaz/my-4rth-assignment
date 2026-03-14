@@ -21,7 +21,7 @@ function calculate() {
     total.innerText = allCardsSection.children.length;
     interviewCount.innerText = interviewList.length;
     rejectedCount.innerText = rejectList.length;
-    jobsCount.innerText = allCardsSection.children.length + ' jobs';
+    jobsCount.innerText = allCardsSection.children.length + ' of 8 jobs';
 
     if (currentStatus === 'interview-filter-btn') {
         jobsCount.innerText = interviewList.length + ' of 8 jobs';
