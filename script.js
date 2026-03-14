@@ -18,15 +18,18 @@ const filterSection = document.getElementById('filter-section')
 
 // Dashboard count calculation
 function calculate() {
-    total.innerText = allCardsSection.children.length;
+    const cardCount = allCardsSection.querySelectorAll('.card-container').length;
+
+    total.innerText = cardCount;
     interviewCount.innerText = interviewList.length;
     rejectedCount.innerText = rejectList.length;
-    jobsCount.innerText = allCardsSection.children.length + ' of 8 jobs';
 
     if (currentStatus === 'interview-filter-btn') {
         jobsCount.innerText = interviewList.length + ' of 8 jobs';
     } else if (currentStatus === 'rejected-filter-btn') {
         jobsCount.innerText = rejectList.length + ' of 8 jobs';
+    } else {
+        jobsCount.innerText = cardCount + ' of 8 jobs';
     }
 
 }
